@@ -7,7 +7,7 @@ import sword from "../assets/sword.png"
 export default function Header({blur, changeBlurEnter , changeBlurLeave}){
     
     return(
-        <div >
+        <div className="headerContainer">
             <div className="Header" >
                 <p className="tytuł">GAMES PLANET<img src={sword} className ="logo2"/></p>
                 <Link  className = "game1" to = "/gra1">GRA1 </Link>

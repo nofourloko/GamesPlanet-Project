@@ -1,10 +1,14 @@
-import React from "react";
+import { useState, useContext} from 'react'
 import "../styles/Home.css"
 import {Link} from 'react-router-dom'
+import coins from "../assets/crypto.png"
+import { UzytkownikContext } from '../context/uzytkownikContext'
 
 function Home(){
+   const {uzytkownikZalogowany, fireBaseUserInfo} = useContext(UzytkownikContext)
     return(
-        <div className="HomeContainer">
+      <div className='homeContainer'>
+        <div className="homeGamesContainer">
              <div className="gra1">
                 <p>GRA 1</p>
                 <img className="gameZdjecie" src="https://cdn.imgbin.com/7/24/19/imgbin-line-angle-line-SGSEv6WT29pAyaXu0b29f7aUy.jpg" />
@@ -21,6 +25,12 @@ function Home(){
                 <Link className = "wybierzGreTekst" to = "/gra3">WYBIERZ</Link>
              </div>
         </div>
+        {uzytkownikZalogowany && 
+               <div className='uzytkownikInfo'>
+                  <p className='uzytkownik'>Witaj <strong>{fireBaseUserInfo.displayName}</strong></p>
+                  <p><img src={coins} className = "coinsMain"/>{fireBaseUserInfo.points}</p>
+               </div>}
+      </div>
     )
 }
 
