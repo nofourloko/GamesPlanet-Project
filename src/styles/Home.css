@@ -1,9 +1,8 @@
 .homeGamesContainer{
     display: flex;
-    width: 1100px;
+    width: 1000px;
     height: 700px;
-    margin: 0px auto;
-    margin-left: 182px;
+    margin-right: 100px;
     align-items: center;
     justify-content: space-around;
 }
@@ -61,21 +60,8 @@
     }
     
 }
+
 .uzytkownikInfo{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid white;
-    border-radius: 10px;
-    height: 100px;
-    backdrop-filter: blur(5px);
-    font-family: 'Major Mono Display', monospace;
-    box-shadow: 1px 1px 10px purple;
-    margin: 40px 0px;
-}
-.homeContainer{
-    display: flex;
-    justify-content: center;
-    width: 1500px;
 }

@@ -1,11 +1,13 @@
-import React, {useState} from "react";
+import { useContext} from 'react'
 import "../styles/Header.css"
 import {Link} from "react-router-dom"
 import logo from "../assets/woman.png"
 import sword from "../assets/sword.png"
+import coins from "../assets/crypto.png"
+import { UzytkownikContext } from '../context/uzytkownikContext'
 
 export default function Header({blur, changeBlurEnter , changeBlurLeave}){
-    
+    const {uzytkownikZalogowany, fireBaseUserInfo} = useContext(UzytkownikContext)
     return(
         <div className="headerContainer">
             <div className="Header" >
@@ -15,11 +17,11 @@ export default function Header({blur, changeBlurEnter , changeBlurLeave}){
                 <Link  className = "game3" to = "/gra3">GRA3</Link>
                 <Link  className = "stronaGłówna" to = "/">STRONA GŁÓWNA</Link>
             </div>
-        <div className="account">
+         <div className="account">
             <Link to = "/login"><img src={logo} className = "profileIcon" /></Link>
+            
         </div>
         </div>
-        
     )
 }
 
