@@ -1,0 +1,24 @@
+.containerButtons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+}
+.Row{
+    width: 350px;
+    text-align: center;
+    color: white;
+    margin-top: 0px;
+}
+.buttonRow{
+    font-family: 'Major Mono Display', monospace;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    margin: 0px 2px;
+    font-size: 25px;
+    backdrop-filter: blur(5px);
+    background-color: transparent;
+    text-shadow: 2px 2px 2px purple;
+    box-shadow: 2px 2px 2px purple;
+}

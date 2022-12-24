@@ -1,0 +1,1 @@
+export default ["JAVA","C","PYTHON","RUBY","PHP","JAVASCRIPT","GROOVY","SQL","GO","SWIFT","MATLAB","PERL","KOTLIN","XML"]

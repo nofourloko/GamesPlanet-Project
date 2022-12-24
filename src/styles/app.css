@@ -1,0 +1,52 @@
+body{
+    margin: 0px;
+    box-sizing: border-box;
+}   
+.filter{
+    filter: blur(5px);
+    margin: 0px;
+}
+.filterGame{
+    filter: blur(5px);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+.filterGra3,.filterGra1{
+    filter: blur(5px);
+    position: absolute;
+    left: 0;
+    right: 500px;
+    bottom: 850px;
+    width: 500px;
+    margin: 70px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.filterGra1{
+    right: 0px; 
+}
+.uzytkownikInfo{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    top: 200px;
+    left: 1570px;
+    border: 1px solid white;
+    border-radius: 10px;
+    height: 100px;
+    box-shadow: 1px 1px 10px purple;
+}
+.coinsMain{
+    height: 20px;
+}
+.containerApp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

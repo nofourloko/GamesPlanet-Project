@@ -1,0 +1,90 @@
+.logowanieContainer,  .profileAndLogout{
+    width: 500px;
+    font-family: 'Major Mono Display', monospace;
+    border: 1px solid white;
+    padding: 10px 20px 30px 20px;
+    border-radius: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    box-shadow: 1px 1px 10px purple;
+   }
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.submit, input, .buttonWyloguj{
+    backdrop-filter: blur(20px);
+    background-color: transparent;
+    color: white;
+    border: 1px solid;
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-family: 'Major Mono Display', monospace;
+    margin: 0px;
+    font-size:20px;
+    text-shadow: 2px 2px 2px purple;
+    box-shadow: 1px 1px 10px purple;
+}
+ input:focus{
+    outline: none;
+ }
+ .man{
+    height: 30px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+ }
+ .loginTekst{
+    font-size: 40px;
+    margin: 20px;
+ }
+ label{
+    font-size: 26px;
+ }
+ .loginContainer{
+   border: 1px solid black;
+   width: 1300px;
+   margin: 30px auto;
+   display: flex;
+   border: 1px solid white;
+   text-shadow: 2px 2px 2px purple;
+    box-shadow: 1px 1px 10px purple;
+    border-radius: 30px;
+    gap: 80px;
+   height: 550px;
+   justify-content: center;
+   align-items: center;
+ }
+ .profileAndLogout{
+   margin: 150px auto;
+   height: 300px;
+   align-items: center;
+   justify-content: center;
+   gap: 30px;
+ }
+ .coins{
+   height: 40px;
+ }
+ .profileAndLogout > p{
+   margin: 0px;
+   font-size: 40px;
+ }
+ .coins{
+   height: 40px;
+ }
+ strong{
+   margin: 0px;
+   text-decoration: underline;
+   text-underline-offset: 8px;
+ }
+ .submit:hover, input:hover, .buttonWyloguj:hover{
+   cursor: pointer;
+   border: 2px solid white;
+   box-shadow: 5px 5px 10px purple;
+ }
+ .uzytkownik{
+    margin: 0px 0px;
+    color: aliceblue;
+ }

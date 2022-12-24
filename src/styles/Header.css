@@ -1,0 +1,72 @@
+body{
+    background-image: url(https://imgs.search.brave.com/l4hPwu4ubKCMsnQTH-tFXPdfrxcAMSE7UeUg0qO634M/rs:fit:1200:1080:1/g:ce/aHR0cHM6Ly9pbWFn/ZXMuYWxwaGFjb2Rl/cnMuY29tLzEwNi90/aHVtYi0xOTIwLTEw/NjI3NTIuanBn);
+    font-family: 'Major Mono Display', monospace;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.Header{
+    display: flex;
+    border: 1px solid;
+    width: 1100px;
+    margin: 50px auto 0px auto;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 30px;
+    color: white;
+    backdrop-filter: blur(20px);
+    height: 100px;
+    font-family: 'Major Mono Display', monospace;
+    text-shadow: 2px 2px 2px purple;
+    box-shadow: 1px 1px 10px purple;
+}
+
+.tytuł{
+    font-size: 35px;
+}
+.game1, .game2, .game3{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+
+}
+.game1:hover, .game2:hover,.game3:hover , .stronaGłówna:hover  {
+    padding: 0px 5px;
+    text-shadow: 0px 0px 3px white;
+    font-size: 18PX;
+    
+  }
+
+
+  .stronaGłówna:hover{
+    font-size: 22px;
+  }
+
+.stronaGłówna{
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
+
+.logo2{
+    height: 50px;
+    position: absolute;
+    left: 320px;
+    bottom: 20px;
+}
+.profileIcon{
+    position: absolute;
+    top: 50px;
+    left: 1600px;
+    border: 1px solid white;
+    border-radius: 60px;
+    width: 100px;
+    height: 100px;
+    box-shadow: 1px 1px 10px purple;
+}
+.profileIcon:hover{
+    padding: 0px 5px;
+    box-shadow: 0px 0px 3px white;
+    filter: none;
+}
