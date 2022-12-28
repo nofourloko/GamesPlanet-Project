@@ -1,5 +1,5 @@
 import React , {useContext} from 'react'
-import { signOutUser , raniking} from '../../firebase/firebase.utils'
+import { signOutUser } from '../../firebase/firebase.utils'
 import { UzytkownikContext } from '../../context/uzytkownikContext'
 import coins from '../../assets/crypto.png'
 import {Link} from "react-router-dom"
@@ -17,6 +17,7 @@ export default function wyloguj() {
         <p><img src={coins} className = "coins"/>{fireBaseUserInfo.points}</p>
         <button onClick={wyloguj} className = "buttonWyloguj">Wyloguj</button>
         <Link to = "/ranking" className = "buttonWyloguj">Ranking</Link>
+        <Link to = "/koszyk" className = "buttonWyloguj">Kup dodtakowe punkty</Link>
     </div>
   )
 }

@@ -1,0 +1,41 @@
+.zakupPuntków{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-shadow: 2px 2px 2px purple;
+    box-shadow: 1px 1px 10px purple;
+    border: 1px solid white;
+    width: 600px;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 30px;
+}
+.suma{
+    text-align: center;
+    backdrop-filter: blur(20px);
+    background-color: transparent;
+    color: white;
+    border: 1px solid;
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-family: 'Major Mono Display', monospace;
+    font-size:20px;
+    text-shadow: 2px 2px 2px purple;
+    box-shadow: 1px 1px 10px purple;
+    margin: 20px 0px 0px 0px;
+}
+.iloscPunktow{
+    width: 100px;
+    border-radius: 30px;
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+
+}
+.zakupPuntkówIlosc{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+    gap: 30px;
+}

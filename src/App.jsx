@@ -7,6 +7,7 @@ import GraDwa from './components/GraDwa'
 import Login from './components/Login'
 import GraTrzy from './components/GraTrzy'
 import Ranking from "./components/Ranking"
+import Koszyk from './components/platnosciForm/Koszyk'
 function App() {
   return (
       <div className='containerApp'>
@@ -18,6 +19,7 @@ function App() {
             <Route path="/gra3" element = {<GraTrzy />} />
             <Route path="/login" element = {<Login />}/>
             <Route path='/ranking' element = {<Ranking/>}/>
+            <Route path="/koszyk" element = {<Koszyk/>}></Route>
         </Routes>
       </div>
   )

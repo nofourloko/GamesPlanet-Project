@@ -1,5 +1,6 @@
 import React , {useState }from 'react'
 import {createAuthWithEmailAndPassword, createUserDocumentFromAuth, } from '../../firebase/firebase.utils'
+import man from "../../assets/man.png"
 
 const deafaultowePolaForm = {
     displayName : '',
@@ -40,7 +41,7 @@ export default function rejestracja({zmiana}) {
     }
   return (
     <div className='logowanieContainer'>
-        <p className='loginTekst'>ZAJERESTRUJ SIE</p>
+        <p className='loginTekst'>Rejestracja<img className = "man" src={man}/></p>
         <form onSubmit={signUp}>
             <label>Nazwa</label>
             <input 

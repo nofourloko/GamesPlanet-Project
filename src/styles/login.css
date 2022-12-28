@@ -1,21 +1,38 @@
-.logowanieContainer,  .profileAndLogout{
+  .logowanieContainer{
     width: 500px;
     font-family: 'Major Mono Display', monospace;
-    border: 1px solid white;
     padding: 10px 20px 30px 20px;
     border-radius: 30px;
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 5px;
-    box-shadow: 1px 1px 10px purple;
    }
-form{
+   .profileAndLogout{
+    width: 500px;
+    font-family: 'Major Mono Display', monospace;
+    padding: 10px 20px 30px 20px;
+    border-radius: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-shadow: 2px 2px 2px purple;
+    box-shadow: 1px 1px 10px purple;
+    border: 1px solid white;
+    padding: 30px;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px auto;
+   }
+  form{
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
-.submit, input, .buttonWyloguj{
+  }
+  .submit, input, .buttonWyloguj{
     backdrop-filter: blur(20px);
     background-color: transparent;
     color: white;
@@ -27,64 +44,72 @@ form{
     font-size:20px;
     text-shadow: 2px 2px 2px purple;
     box-shadow: 1px 1px 10px purple;
-}
- input:focus{
+  }
+  input:focus{
     outline: none;
- }
- .man{
+  }
+  .man{
     height: 30px;
     margin-left: 10px;
     margin-bottom: 0px;
- }
- .loginTekst{
+  }
+  .loginTekst{
     font-size: 40px;
     margin: 20px;
- }
- label{
+  }
+  label{
     font-size: 26px;
- }
- .loginContainer{
+  }
+  .loginContainer{
    border: 1px solid black;
-   width: 1300px;
    margin: 30px auto;
    display: flex;
+   flex-direction: column;
    border: 1px solid white;
    text-shadow: 2px 2px 2px purple;
     box-shadow: 1px 1px 10px purple;
     border-radius: 30px;
-    gap: 80px;
-   height: 550px;
    justify-content: center;
    align-items: center;
- }
- .profileAndLogout{
-   margin: 150px auto;
-   height: 300px;
-   align-items: center;
-   justify-content: center;
-   gap: 30px;
- }
- .coins{
+   backdrop-filter: blur(20px);
+  }
+  .coins{
    height: 40px;
- }
- .profileAndLogout > p{
+  }
+  .profileAndLogout > p{
    margin: 0px;
    font-size: 40px;
- }
- .coins{
+  }
+  .coins{
    height: 40px;
- }
- strong{
+  }
+  strong{
    margin: 0px;
    text-decoration: underline;
    text-underline-offset: 8px;
- }
- .submit:hover, input:hover, .buttonWyloguj:hover{
+  }
+  .submit:hover, input:hover, .buttonWyloguj:hover {
    cursor: pointer;
    border: 2px solid white;
    box-shadow: 5px 5px 10px purple;
- }
- .uzytkownik{
+  }
+  .uzytkownik{
     margin: 0px 0px;
     color: aliceblue;
+  }
+  .zmianaAutoryzacji{
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+  font-family: 'Major Mono Display', monospace;
+  text-decoration: underline;
+ }
+ .zmianaAutoryzacjiTekst{
+  margin: 0px 0px 10px 0px;
+  font-size: 20px;
+ }
+ .zmianaAutoryzacji:hover{
+   cursor: pointer;
+   text-shadow: 5px 5px 10px purple;
  }
