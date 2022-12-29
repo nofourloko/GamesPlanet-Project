@@ -26,6 +26,7 @@ function GraJeden(){
         const [wynik, setWynik] = useState(false)
         const {zmienPunkty} = useContext(PunktyContext)
         const {fireBaseUserInfo, setFireBaseUserInfo, currentUser  } = useContext(UzytkownikContext)
+        const [aktulaneHaslo, setAktualneHaslo] = useState()
 console.log(zmienPunkty)
   useEffect(() =>{
     wygrales()
@@ -40,6 +41,7 @@ console.log(zmienPunkty)
   }))
 
   const czyLiterkaZnajdujeSieWhasle = (e) =>{
+    setAktualneHaslo(haslo)
     setID(e.target.name)
     if(!(haslo.includes(e.target.name))){
       if(proby < 6){
@@ -81,6 +83,7 @@ console.log(zmienPunkty)
       setHasloMapped(haslo.split("").map((el) => {
         return el = "*"
       }))
+      setAktualneHaslo(haslo)
     }
   return (
     <div className="graJedenMain">
@@ -95,6 +98,7 @@ console.log(zmienPunkty)
       </div >:
       <div className='wynikGry'>
           <p className='endGamePText'>{endGameText}</p>
+          <p >Hasło : {aktulaneHaslo} </p>
           <button className='endGameButton'onClick={nowaGra}>Nowa Gra</button>
       </div>}
         <button 

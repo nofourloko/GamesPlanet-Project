@@ -24,8 +24,11 @@ function GraTrzy() {
     const [buttonDobierz , setButtonDobierz] =  useState(false)
     const [buttonSpasuj, setButtonSpasuj] = useState(false)
     const [nowaTalia ,setNowaTalia] = useState(0)
+    const [zaIleGra , setZaIleGra] = useState(0)
+    const [pokazRozpocznijGre , setPokazRozpocznijGre ] = useState(true)
     const {zmienPunkty} = useContext(PunktyContext)
     const {fireBaseUserInfo, setFireBaseUserInfo, currentUser  } = useContext(UzytkownikContext)
+
     
 
 
@@ -48,6 +51,13 @@ function GraTrzy() {
     const obliczeniePunktów = async(punkty) =>{
         await zmienPunkty(fireBaseUserInfo, setFireBaseUserInfo, currentUser, punkty)
     }
+
+    const amountToPlay = (e) => {
+        const {value} = e.target
+        setZaIleGra(+value)
+        setPokazRozpocznijGre(false)
+    }
+
     function przypiszPierwszeKarty(data){
         setKartyKrupier(prevValue => [...prevValue, data.cards[0].images.png])
         setKartyGracz(prevValue => [...prevValue, data.cards[1].images.png, data.cards[2].images.png])
@@ -76,7 +86,7 @@ function GraTrzy() {
             setTimeout(() => {
                 setWynik(true)
                 setWynikNapis("PRZEGRAŁEŚ")
-                obliczeniePunktów((-100)) 
+                obliczeniePunktów((-zaIleGra)) 
             }, 1500);
         }
     }
@@ -86,10 +96,10 @@ function GraTrzy() {
             setWynik(true)
             if(krupier > gracz && krupier < 22 || krupier === gracz || gracz > 21){
                 setWynikNapis("PRZEGRAŁEŚ")
-                obliczeniePunktów((-100)) 
+                obliczeniePunktów((-zaIleGra)) 
             }else
                 setWynikNapis("Wygrałeś")
-                obliczeniePunktów((100)) 
+                obliczeniePunktów((zaIleGra)) 
         },1500)
     }
 
@@ -138,7 +148,9 @@ function GraTrzy() {
         setKrupier(0)
         setKartyGracz([])
         setKartyKrupier([])
+        setStartGame(true)
         setNowaGra(true)
+        setPokazRozpocznijGre(true)
         setWynik(false)
         setButtonSpasuj(false)
         setButtonDobierz(false)
@@ -180,7 +192,19 @@ function GraTrzy() {
                 </>
             :
                 <>
-                    <button className='startGame' onClick={() => setStartGame(false)}> ROZPOCZNIJ GRE</button>
+                    {!pokazRozpocznijGre ?
+                        <button  className='startGame'  onClick={() => setStartGame(false)}> ROZPOCZNIJ GRE</button>:
+                        <div className='startGameZaileGra'>
+                            <div>
+                                <p className='zaIleGraP'>Za ile chcesz zagrac</p>
+                            </div>
+                            <div className='zaIleGra'>
+                                <button className='zaIleGraButton1'onClick={amountToPlay} value = {100} >100</button>
+                                <button className='zaIleGraButton2'onClick={amountToPlay} value = {500} >500</button>
+                                <button className='zaIleGraButton3' onClick={amountToPlay} value = {1000} >1000</button>
+                            </div>
+                        </div>
+                    }
                 </>
         }
     </div>
