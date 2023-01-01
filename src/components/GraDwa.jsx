@@ -126,7 +126,8 @@ function graDwa() {
           <button 
           style={{display : !wynik ? 'flex' : 'none' }} 
           onClick = {() => setWynik(true)}
-          className='startGame'>ROZPOCZNIJ GRE</button>
+          className='startGame'
+          disabled = {!localStorage.getItem('user')}>ROZPOCZNIJ GRE</button>
           {!localStorage.getItem('user') && 
           <div className="userInfoStartGame">
             <p>Aby zagrac prosze wejsc w ikonke w prawym górnym rogu i sie zalogować</p>
