@@ -117,9 +117,12 @@
     font-family: 'Major Mono Display', monospace;
     gap: 0px;
 }
-.wynikGry > p{
+.endGamePText{
     font-size: 60px;
     margin: 20px;
+}
+.wynikGryHaslo{
+    font-size: 30px;
 }
 
 .wynikGry > button{

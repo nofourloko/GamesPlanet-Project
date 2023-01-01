@@ -98,13 +98,17 @@ console.log(zmienPunkty)
       </div >:
       <div className='wynikGry'>
           <p className='endGamePText'>{endGameText}</p>
-          <p >Hasło : {aktulaneHaslo} </p>
+          <p className="wynikGryHaslo">Hasło : {aktulaneHaslo} </p>
           <button className='endGameButton'onClick={nowaGra}>Nowa Gra</button>
       </div>}
         <button 
           style={{display : !wynik ? 'flex' : 'none' }} 
           onClick = {() => setWynik(true)}
-          className='startGame'>ROZPOCZNIJ GRE</button>
+          className='startGame'
+          disabled = {!localStorage.getItem('user')}>ROZPOCZNIJ GRE</button>
+          {!localStorage.getItem('user') && <div className="userInfoStartGame">
+            <p>Aby zagrac prosze wejsc w ikonke w prawym górnym rogu i sie zalogować</p>
+          </div>}
     </div>
     )
 }

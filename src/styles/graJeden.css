@@ -89,3 +89,12 @@ body{
 .wisielecIcon{
     height: 40px;
 }
+.wynikGry{
+    height: 700px;
+}
+.userInfoStartGame{
+    width: 600px;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 3px 3px 3px purple;
+}

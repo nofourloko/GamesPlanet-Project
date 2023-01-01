@@ -120,13 +120,17 @@ function graDwa() {
           </div>
         </div> :
        <div className='wynikGry'>
-          <p>{winner}</p>
+          <p className='endGamePText'>{winner}</p>
           <button className = "endGameButton"onClick={newGame}>New Game</button>
         </div>}
           <button 
           style={{display : !wynik ? 'flex' : 'none' }} 
           onClick = {() => setWynik(true)}
           className='startGame'>ROZPOCZNIJ GRE</button>
+          {!localStorage.getItem('user') && 
+          <div className="userInfoStartGame">
+            <p>Aby zagrac prosze wejsc w ikonke w prawym górnym rogu i sie zalogować</p>
+          </div>}
       </div>
 
     )

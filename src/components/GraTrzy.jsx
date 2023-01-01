@@ -199,12 +199,27 @@ function GraTrzy() {
                                 <p className='zaIleGraP'>Za ile chcesz zagrac</p>
                             </div>
                             <div className='zaIleGra'>
-                                <button className='zaIleGraButton1'onClick={amountToPlay} value = {100} >100</button>
-                                <button className='zaIleGraButton2'onClick={amountToPlay} value = {500} >500</button>
-                                <button className='zaIleGraButton3' onClick={amountToPlay} value = {1000} >1000</button>
+                                <button 
+                                    className='zaIleGraButton1'
+                                    onClick={amountToPlay} 
+                                    value = {100} 
+                                    disabled = {!localStorage.getItem('user')}>100</button>
+                                <button 
+                                    className='zaIleGraButton2'
+                                    onClick={amountToPlay} 
+                                    value = {500}
+                                    disabled = {!localStorage.getItem('user')}>500</button>
+                                <button 
+                                    className='zaIleGraButton3'
+                                     onClick={amountToPlay} 
+                                     value = {1000}
+                                     disabled = {!localStorage.getItem('user')} >1000</button>
                             </div>
                         </div>
                     }
+                    {!localStorage.getItem('user') && <div className="userInfoStartGame">
+                        <p>Aby zagrac prosze wejsc w ikonke w prawym górnym rogu i sie zalogować</p>
+                    </div>}
                 </>
         }
     </div>
